@@ -1,4 +1,4 @@
-
+# needs to split the word in case there are more than 9 symbols in alphabet
 class DataParser():
 
     # constructor

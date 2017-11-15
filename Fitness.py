@@ -6,7 +6,6 @@ class Fitness():
         self.alphabet_size = dp.alphabet_size
 
 
-
     def evalFSM(self, chromosome):
 
         fsm = chromosome.fsm
