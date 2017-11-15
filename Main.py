@@ -1,7 +1,5 @@
 from DataParser import *
-from Chromosome import *
 from InitializePopulation import *
-from Genotype import *
 from Fitness import *
 from Mutation import *
 from Crossover import *

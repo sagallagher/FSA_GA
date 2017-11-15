@@ -1,11 +1,4 @@
-from DataParser import *
-from Chromosome import *
-from InitializePopulation import *
 from Genotype import *
-from Fitness import *
-from Mutation import *
-from Crossover import *
-from GeneticAlgorithm import *
 class GeneticAlgorithm():
     def __init__(self, initialize_population, fitness, crossover, mutation):
         self.initialize_population = initialize_population
