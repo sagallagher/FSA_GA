@@ -12,11 +12,11 @@ if __name__ == '__main__':
     dp.setAlphabetSize()
 
 
-    ip = RandomInitializePopulation(dp,5,2,2);
+    ip = RandomInitializePopulation(dp,3,2,2);
     f = FSMHitRatioFitness(dp)
     c = RandomCrossover()
     m = Mutation(dp)
     #genotype = Genotype()
     ga = GeneticAlgorithm(ip,f,c,m)
 
-    print ga.start()
+    print ga.start(1000)
