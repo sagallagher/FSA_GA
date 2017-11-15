@@ -1,14 +1,14 @@
 from random import randint
 class Mutation():
 
-    def __init__(self, genotype, alphabet_size):
-        self.genotype = genotype
-        self.alphabet_size = alphabet_size
-        self.mutateGenotype()
+    def __init__(self, dp):
 
-    def mutateGenotype(self):
+        self.alphabet_size = dp.alphabet_size
 
-        for chromosome in self.genotype.chromosomes:
+
+    def mutateGenotype(self, genotype):
+
+        for chromosome in genotype.chromosomes:
             if len(chromosome.fsm) == 0: break
             number_of_states = len(chromosome.fsm)
 
@@ -23,3 +23,6 @@ class Mutation():
 
             # write the random number to the random position
             chromosome.fsm[random_row][random_col] = random_transition
+
+    def start(self, genotype):
+        self.mutateGenotype(genotype)

@@ -1,10 +1,9 @@
 class Fitness():
 
-    def __init__(self, genotype, learning_data, alphabet_size):
-        self.genotype = genotype
-        self.learning_data = learning_data
-        self.alphabet_size = alphabet_size
-        self.setFitness()
+    def __init__(self, dp):
+
+        self.learning_data = dp.learning_data
+        self.alphabet_size = dp.alphabet_size
 
     def __str__(self):
         result = ''
@@ -24,7 +23,7 @@ class Fitness():
             for character in key:
                 example.append(int(character))
 
-            row = 1
+            row = 0
 
             '''
             BUG: fsm[][] sometimes goes out of bounds
@@ -33,8 +32,8 @@ class Fitness():
 
             for element in example:
 
-                try: row = fsm[row-1][element]
-                except: print "AHHH",row,element, len(fsm)
+                row = fsm[row][element]
+
             # if you end on a final state and you should have, you got one correct
             if (row in chromosome.final_states
                 and int(self.learning_data[key]) == 1): correct+=1
@@ -46,6 +45,10 @@ class Fitness():
         # the fitness is percentage of examples the FSM got correct
         return float(correct)/len(self.learning_data)
 
-    def setFitness(self):
-        for chromosome in self.genotype.chromosomes:
+    def setFitness(self, genotype):
+        for chromosome in genotype.chromosomes:
             chromosome.fitness = self.evalFSM(chromosome)
+
+
+    def start(self, genotype):
+         self.setFitness(genotype)

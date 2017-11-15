@@ -5,25 +5,18 @@ from Genotype import *
 from Fitness import *
 from Mutation import *
 from Crossover import *
+from GeneticAlgorithm import *
 # main method
 if __name__ == '__main__':
     dp = DataParser('test_data.txt')
 
-    ip = InitializePopulation(dp.alphabet_size,5,2,4);
+    genotype = Genotype()
 
+    ip = InitializePopulation(dp,2,2,4);
+    f = Fitness(dp)
+    c = Crossover()
+    m = Mutation(dp)
 
+    ga = GeneticAlgorithm(ip,f,c,m)
 
-    i = 0
-    while(True):
-        i+=1
-        f = Fitness(ip.genotype, dp.learning_data, dp.alphabet_size)
-        if f.genotype.getMaxFitness() >= 1: break
-
-        m = Mutation(f.genotype, dp.alphabet_size)
-
-        c = Crossover(m.genotype)
-
-
-
-    print f.genotype
-    print "generations:\t", i
+    ga.start()

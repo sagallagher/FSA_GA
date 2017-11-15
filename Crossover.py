@@ -3,44 +3,41 @@ from random import randint
 
 class Crossover():
 
-    def __init__(self, genotype):
-        self.genotype = genotype
-
-        self.getOffspring()
+    def __init__(self): pass
 
     # get the two most fit chromosomes
-    def getMostFit(self):
+    def getMostFit(self, genotype):
         most_fit = Chromosome([],[])
         most_fit2 = Chromosome([],[])
-        for chromosome in self.genotype.chromosomes:
+        for chromosome in genotype.chromosomes:
             if chromosome.fitness > most_fit.fitness: most_fit = chromosome
 
-        for chromosome in self.genotype.chromosomes:
+        for chromosome in genotype.chromosomes:
             if (chromosome.fitness > most_fit2.fitness
                 and chromosome.fsm != most_fit.fsm): most_fit2 = chromosome
 
         return most_fit, most_fit2
 
     # get the two least fit chromosomes
-    def getLeastFit(self):
+    def getLeastFit(self, genotype):
         least_fit = Chromosome([],[])
         least_fit.fitness = 1.1
         least_fit2 = Chromosome([],[])
         least_fit2.fitness = 1.1
 
-        for chromosome in self.genotype.chromosomes:
+        for chromosome in genotype.chromosomes:
             if chromosome.fitness < least_fit.fitness: least_fit = chromosome
 
-        for chromosome in self.genotype.chromosomes:
+        for chromosome in genotype.chromosomes:
             if (chromosome.fitness <= least_fit2.fitness
                 and not chromosome == least_fit): least_fit2 = chromosome
 
         return least_fit, least_fit2
 
     # get the result of the cross over of the most fit parents
-    def getOffspring(self):
+    def getOffspring(self, genotype):
 
-        (parent1, parent2) = self.getMostFit()
+        (parent1, parent2) = self.getMostFit(genotype)
 
         child1 = Chromosome([],[])
         child2 = Chromosome([],[])
@@ -61,12 +58,12 @@ class Crossover():
         child1.final_states = parent1.final_states[:random_pivot2] + parent2.final_states[random_pivot2:]
         child2.final_states = parent2.final_states[random_pivot2:] + parent2.final_states[:random_pivot2]
 
-        self.selectSurvivors(child1, child2)
+        self.selectSurvivors(child1, child2, genotype)
 
     # replace the least fit chromosomes with the offspring of the most fit
-    def selectSurvivors(self, child1, child2):
+    def selectSurvivors(self, child1, child2, genotype):
 
-        (least_fit1, least_fit2) = self.getLeastFit()
+        (least_fit1, least_fit2) = self.getLeastFit(genotype)
 
         '''
         BUG: wheen trying to remove least_fit2 sometimes
@@ -79,9 +76,12 @@ class Crossover():
         in its defualt state
         '''
 
-        self.genotype.chromosomes.remove(least_fit1)
+        genotype.chromosomes.remove(least_fit1)
 
-        self.genotype.chromosomes.remove(least_fit2)
+        genotype.chromosomes.remove(least_fit2)
 
-        self.genotype.pushChromosome(child1)
-        self.genotype.pushChromosome(child2)
+        genotype.pushChromosome(child1)
+        genotype.pushChromosome(child2)
+
+    def start(self,genotype):
+        self.getOffspring(genotype)

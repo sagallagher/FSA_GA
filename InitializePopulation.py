@@ -5,11 +5,13 @@ from Genotype import *
 class InitializePopulation():
 
     # constructor
-    def __init__(self, alphabet_size, population_size, min_states, max_states):
-        self.alphabet_size = alphabet_size
-        self.genotype = Genotype()
+    def __init__(self, data_parser, population_size, min_states, max_states):
+        self.alphabet_size = data_parser.alphabet_size
+        self.learning_data = data_parser.learning_data
 
-        self.fillGenotype(population_size, min_states, max_states)
+        self.min_states = min_states
+        self.max_states = max_states
+        self.population_size = population_size
 
     # string representation of initial population is the genotype
     def __str__(self): return str(self.genotype)
@@ -37,7 +39,7 @@ class InitializePopulation():
     # choose random states to be final given a FSM
     def generateRandomFinalStates(self, fsm):
         final_states = []
-        number_of_final_states = randint(0,len(fsm))
+        number_of_final_states = randint(1,len(fsm))
         for state in xrange(number_of_final_states):
             random_final_state = randint(0,len(fsm)-1)
             if random_final_state not in final_states:
@@ -45,9 +47,12 @@ class InitializePopulation():
         return final_states
 
     # fill genotype with desired population size
-    def fillGenotype(self, population_size, min_states,max_states):
+    def fillGenotype(self, genotype):
 
-        for i in xrange(population_size):
-            fsm = self.generateRandomFSM(min_states, max_states)
+        for i in xrange(self.population_size):
+            fsm = self.generateRandomFSM(self.min_states, self.max_states)
             final_states = self.generateRandomFinalStates(fsm)
-            self.genotype.pushChromosome(Chromosome(fsm, final_states))
+            genotype.pushChromosome(Chromosome(fsm, final_states))
+
+    def start(self, genotype):
+        self.fillGenotype(genotype)
