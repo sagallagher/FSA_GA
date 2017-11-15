@@ -32,8 +32,8 @@ class Crossover():
             if chromosome.fitness < least_fit.fitness: least_fit = chromosome
 
         for chromosome in self.genotype.chromosomes:
-            if (chromosome.fitness < least_fit2.fitness
-                and chromosome.fsm != least_fit.fsm): least_fit2 = chromosome
+            if (chromosome.fitness <= least_fit2.fitness
+                and not chromosome == least_fit): least_fit2 = chromosome
 
         return least_fit, least_fit2
 
@@ -52,7 +52,10 @@ class Crossover():
         # one point crossover on rows
         child1.fsm = parent1.fsm[:random_pivot] + parent2.fsm[random_pivot:]
         child2.fsm = parent2.fsm[random_pivot:] + parent2.fsm[:random_pivot]
-
+        '''
+        crossover in such a way that the final states follow its associated rows
+        during the crossover
+        '''
         random_pivot2 = randint(0, len(parent2.final_states))
         # one point crossover on final states
         child1.final_states = parent1.final_states[:random_pivot2] + parent2.final_states[random_pivot2:]
@@ -64,7 +67,18 @@ class Crossover():
     def selectSurvivors(self, child1, child2):
 
         (least_fit1, least_fit2) = self.getLeastFit()
-        
+
+        '''
+        BUG: wheen trying to remove least_fit2 sometimes
+        it cannot because it does not exist in the list
+
+        Maybe least_fit1 == least_fit2 in these cases?
+        ^ I dont think thats it
+
+        least_fit2 is occasionally not finding a chromosome and remaining
+        in its defualt state
+        '''
+
         self.genotype.chromosomes.remove(least_fit1)
 
         self.genotype.chromosomes.remove(least_fit2)

@@ -16,6 +16,7 @@ class Fitness():
         fsm = chromosome.fsm
         correct = 0
 
+        # loop through each learning example
         for key in self.learning_data:
 
             # break the string into a char array
@@ -23,11 +24,17 @@ class Fitness():
             for character in key:
                 example.append(int(character))
 
-            row = 0
+            row = 1
 
+            '''
+            BUG: fsm[][] sometimes goes out of bounds
+            '''
             # go through the FSM
-            for element in example: row = fsm[row][element]
 
+            for element in example:
+
+                try: row = fsm[row-1][element]
+                except: print "AHHH",row,element, len(fsm)
             # if you end on a final state and you should have, you got one correct
             if (row in chromosome.final_states
                 and int(self.learning_data[key]) == 1): correct+=1
@@ -38,10 +45,6 @@ class Fitness():
 
         # the fitness is percentage of examples the FSM got correct
         return float(correct)/len(self.learning_data)
-
-
-
-
 
     def setFitness(self):
         for chromosome in self.genotype.chromosomes:

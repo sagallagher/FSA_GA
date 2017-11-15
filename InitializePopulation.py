@@ -19,6 +19,11 @@ class InitializePopulation():
 
     # generate a random finite state machine
     def generateRandomFSM(self, min_states, max_states):
+
+        '''
+        BUG: currently generates NFSA. Might be easier if only generate DFSA
+        '''
+
         number_of_states = randint(min_states, max_states)
         fsm = []
         for number_state in xrange(number_of_states):
