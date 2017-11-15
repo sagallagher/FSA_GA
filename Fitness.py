@@ -22,9 +22,6 @@ class Fitness():
 
             row = 0
 
-            '''
-            BUG: fsm[][] sometimes goes out of bounds
-            '''
             # go through the FSM
 
             for element in example:

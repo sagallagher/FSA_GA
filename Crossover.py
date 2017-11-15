@@ -51,7 +51,7 @@ class Crossover():
         child2.fsm = parent2.fsm[random_pivot:] + parent2.fsm[:random_pivot]
         '''
         crossover in such a way that the final states follow its associated rows
-        during the crossover
+        during the crossover?
         '''
         random_pivot2 = randint(0, len(parent2.final_states))
         # one point crossover on final states
@@ -63,16 +63,7 @@ class Crossover():
     def selectSurvivors(self, child1, child2, genotype):
         (least_fit1, least_fit2) = self.getLeastFit(genotype)
 
-        '''
-        BUG: wheen trying to remove least_fit2 sometimes
-        it cannot because it does not exist in the list
 
-        Maybe least_fit1 == least_fit2 in these cases?
-        ^ I dont think thats it
-
-        least_fit2 is occasionally not finding a chromosome and remaining
-        in its defualt state
-        '''
 
         genotype.chromosomes.remove(least_fit1)
 
@@ -82,5 +73,4 @@ class Crossover():
         genotype.pushChromosome(child2)
 
     def start(self,genotype):
-        print "in crossover"
         self.getOffspring(genotype)
