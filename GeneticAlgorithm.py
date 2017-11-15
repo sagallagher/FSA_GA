@@ -11,9 +11,10 @@ class GeneticAlgorithm():
 
         genotype = Genotype()
         generation = 1
-        a = 0
+
         self.initialize_population.start(genotype)
         self.fitness.start(genotype)
+        
         while(True):
 
             if generation%1000 == 0: print "generation:\t", generation
