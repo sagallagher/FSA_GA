@@ -58,11 +58,9 @@ class Crossover():
         child1.final_states = parent1.final_states[:random_pivot2] + parent2.final_states[random_pivot2:]
         child2.final_states = parent2.final_states[random_pivot2:] + parent2.final_states[:random_pivot2]
 
-        self.selectSurvivors(child1, child2, genotype)
 
     # replace the least fit chromosomes with the offspring of the most fit
     def selectSurvivors(self, child1, child2, genotype):
-
         (least_fit1, least_fit2) = self.getLeastFit(genotype)
 
         '''
@@ -84,4 +82,5 @@ class Crossover():
         genotype.pushChromosome(child2)
 
     def start(self,genotype):
+        print "in crossover"
         self.getOffspring(genotype)

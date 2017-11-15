@@ -19,4 +19,4 @@ if __name__ == '__main__':
 
     ga = GeneticAlgorithm(ip,f,c,m)
 
-    ga.start()
+    print ga.start()

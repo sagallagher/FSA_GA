@@ -25,4 +25,5 @@ class Mutation():
             chromosome.fsm[random_row][random_col] = random_transition
 
     def start(self, genotype):
+        print "in mutation"
         self.mutateGenotype(genotype)

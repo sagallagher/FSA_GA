@@ -1,14 +1,11 @@
+
 class Fitness():
 
     def __init__(self, dp):
-
         self.learning_data = dp.learning_data
         self.alphabet_size = dp.alphabet_size
 
-    def __str__(self):
-        result = ''
-        for chromosome in self.chromosomes: result += ('-'*50+'\n' + str(chromosome))
-        return result
+
 
     def evalFSM(self, chromosome):
 
@@ -51,4 +48,4 @@ class Fitness():
 
 
     def start(self, genotype):
-         self.setFitness(genotype)
+        self.setFitness(genotype)

@@ -13,8 +13,6 @@ class InitializePopulation():
         self.max_states = max_states
         self.population_size = population_size
 
-    # string representation of initial population is the genotype
-    def __str__(self): return str(self.genotype)
 
     # return the randomly generated genotype
     def getGenotype(self): return self.genotype
