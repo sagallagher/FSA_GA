@@ -1,5 +1,5 @@
 
-class Fitness():
+class FSMHitRatioFitness():
 
     def __init__(self, dp):
         self.learning_data = dp.learning_data

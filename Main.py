@@ -1,20 +1,22 @@
-from DataParser import *
-from InitializePopulation import *
-from Fitness import *
-from Mutation import *
-from Crossover import *
-from GeneticAlgorithm import *
+from DataParser.DataParser import *
+from InitializePopulation.RandomInitializePopulation import *
+from Fitness.FSMHitRatioFitness import *
+from Crossover.RandomCrossover import *
+from Mutation.RandomTransitionMutation import *
+from Genotype.Genotype import *
+from GeneticAlgorithm.GeneticAlgorithm import *
+
 # main method
 if __name__ == '__main__':
-    dp = DataParser('test_data.txt')
+    dp = DataParser('Data/test_data.txt')
+    dp.setAlphabetSize()
 
-    genotype = Genotype()
 
-    ip = InitializePopulation(dp,5,2,2);
-    f = Fitness(dp)
-    c = Crossover()
+    ip = RandomInitializePopulation(dp,5,2,2);
+    f = FSMHitRatioFitness(dp)
+    c = RandomCrossover()
     m = Mutation(dp)
-
+    #genotype = Genotype()
     ga = GeneticAlgorithm(ip,f,c,m)
 
     print ga.start()

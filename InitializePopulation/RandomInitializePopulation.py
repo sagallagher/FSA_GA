@@ -1,8 +1,9 @@
 from random import randint
-from Chromosome import *
-from Genotype import *
+from Genotype.Genotype import *
+from Genotype.Chromosome import *
 
-class InitializePopulation():
+
+class RandomInitializePopulation():
 
     # constructor
     def __init__(self, data_parser, population_size, min_states, max_states):

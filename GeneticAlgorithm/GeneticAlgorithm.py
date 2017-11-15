@@ -1,4 +1,4 @@
-from Genotype import *
+from Genotype.Genotype import *
 class GeneticAlgorithm():
     def __init__(self, initialize_population, fitness, crossover, mutation):
         self.initialize_population = initialize_population
@@ -9,25 +9,25 @@ class GeneticAlgorithm():
 
     def start(self):
 
-        genotype = Genotype()
+        geno = Genotype()
         generation = 1
 
-        self.initialize_population.start(genotype)
-        self.fitness.start(genotype)
-        
+        self.initialize_population.start(geno)
+        self.fitness.start(geno)
+
         while(True):
 
             if generation%1000 == 0: print "generation:\t", generation
-            self.fitness.start(genotype)
+            self.fitness.start(geno)
 
-            if genotype.getMaxFitness() >= 1: break
+            if geno.getMaxFitness() >= 1: break
 
-            self.mutation.start(genotype)
+            self.mutation.start(geno)
 
 
-            self.crossover.start(genotype)
+            self.crossover.start(geno)
 
             generation+=1
 
         print "final generation:\t", generation
-        return genotype
+        return geno

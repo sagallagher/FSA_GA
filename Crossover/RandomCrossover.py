@@ -1,7 +1,8 @@
-from Chromosome import *
+from Genotype.Genotype import *
+from Genotype.Chromosome import *
 from random import randint
 
-class Crossover():
+class RandomCrossover():
 
     def __init__(self): pass
 
