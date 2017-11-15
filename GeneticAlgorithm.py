@@ -16,7 +16,7 @@ class GeneticAlgorithm():
         self.fitness.start(genotype)
         while(True):
 
-
+            if generation%1000 == 0: print "generation:\t", generation
             self.fitness.start(genotype)
 
             if genotype.getMaxFitness() >= 1: break
@@ -26,7 +26,7 @@ class GeneticAlgorithm():
 
             self.crossover.start(genotype)
 
-            print generation,"\n******************************\n",genotype
             generation+=1
 
+        print "final generation:\t", generation
         return genotype
