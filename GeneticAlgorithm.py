@@ -10,7 +10,7 @@ class GeneticAlgorithm():
     def start(self):
 
         genotype = Genotype()
-        generation = 0
+        generation = 1
         a = 0
         self.initialize_population.start(genotype)
         self.fitness.start(genotype)

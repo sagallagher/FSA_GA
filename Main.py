@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     genotype = Genotype()
 
-    ip = InitializePopulation(dp,5,2,4);
+    ip = InitializePopulation(dp,5,2,2);
     f = Fitness(dp)
     c = Crossover()
     m = Mutation(dp)
