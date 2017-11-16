@@ -53,5 +53,11 @@ class RandomInitializePopulation():
             final_states = self.generateRandomFinalStates(fsm)
             genotype.pushChromosome(Chromosome(fsm, final_states))
 
+    def introduceDiversity(self, genotype):
+        fsm = self.generateRandomFSM(self.min_states, self.max_states)
+        final_states = self.generateRandomFinalStates(fsm)
+        genotype.pushChromosome(Chromosome(fsm, final_states))
+
+
     def start(self, genotype):
         self.fillGenotype(genotype)

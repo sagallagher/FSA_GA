@@ -1,3 +1,4 @@
+from Chromosome import *
 class Genotype():
     def __init__(self):
         self.chromosomes = []
@@ -16,3 +17,11 @@ class Genotype():
             if chromosome.fitness > max_fitness: max_fitness = chromosome.fitness
 
         return max_fitness
+
+
+    def getMostFit(self):
+        most_fit = self.chromosomes[0]
+        for chromosome in self.chromosomes:
+            if chromosome.fitness >= most_fit.fitness:
+                most_fit = chromosome
+        return most_fit

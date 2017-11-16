@@ -29,6 +29,6 @@ class RandomLearningGenerator():
 
 
 
-rlg = RandomLearningGenerator('../RandomData/t',5,5,2,0,10)
+rlg = RandomLearningGenerator('../RandomData/t',5,10,2,0,10)
 
 rlg.generateLearningData()
