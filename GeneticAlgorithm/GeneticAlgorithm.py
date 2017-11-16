@@ -26,7 +26,7 @@ class GeneticAlgorithm():
                 self.initialize_population.start(geno)
                 restart_count += 1
 
-            if generation%1000 == 0: print "generation:\t", generation
+            if generation%10000 == 0: print "generation:\t", generation,'\n',geno
 
             self.fitness.start(geno)
 
@@ -37,6 +37,8 @@ class GeneticAlgorithm():
             self.crossover.start(geno)
 
             generation+=1
+
+
 
         print "final generation:\t", generation
         return geno

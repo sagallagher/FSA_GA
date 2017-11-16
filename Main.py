@@ -18,4 +18,4 @@ if __name__ == '__main__':
     m = RandomTransitionMutation(dp)
     ga = GeneticAlgorithm(ip,f,c,m)
 
-    print ga.start(1000)
+    print ga.start(10000)

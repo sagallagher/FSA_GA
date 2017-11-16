@@ -23,18 +23,28 @@ class DataParser():
         for key in self.learning_data:
             for character in key:
                 if character not in alphabet: alphabet.append(character)
-        self.alphabet_size = len(alphabet)
+        self.alphabet_size = len(alphabet)-1
 
     # read the data file into data_matrix
     def readDataFile(self):
+
+        with open(self.data_file, 'r') as f:
+            for line in f:
+                split_line = line.split(':')
+                self.learning_data[split_line[0]] = split_line[1]
+        self.setAlphabetSize()
+        '''
         try:
             with open(self.data_file, 'r') as f:
                 for line in f:
-                    split_line = line.split(',')
-                    self.learning_data[split_line[0]] = split_line[1]
+                    split_line = line.split(':')
+                    self.learning_data[split_line[0].split(' ')] = split_line[1]
             self.setAlphabetSize()
 
-        except: print('Could not read data file: ' + self.data_file)
+        except:
+            print('Could not read data file: ' + self.data_file)
+            exit()
+        '''
 
     # return data_matrix
     def getLearningData(self): return self.learning_data
