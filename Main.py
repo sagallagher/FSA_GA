@@ -15,8 +15,7 @@ if __name__ == '__main__':
     ip = RandomInitializePopulation(dp,3,2,2);
     f = FSMHitRatioFitness(dp)
     c = RandomCrossover()
-    m = Mutation(dp)
-    #genotype = Genotype()
+    m = RandomTransitionMutation(dp)
     ga = GeneticAlgorithm(ip,f,c,m)
 
     print ga.start(1000)

@@ -1,5 +1,5 @@
 from random import randint
-class Mutation():
+class RandomTransitionMutation():
 
     def __init__(self, dp):
 
