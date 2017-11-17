@@ -15,30 +15,32 @@ class GeneticAlgorithm():
         restart_count = 1
         self.initialize_population.start(geno)
         self.fitness.start(geno)
-
+        count = 0
         while(True):
             '''
             If N generations pass without progress to the overall fitness of the
             genotype, introduce diversity
             '''
 
-            #if generation >= give_up_at: break
+            if generation >= give_up_at: break
             # if we exceed N generations, introduce random chromosomes to the genotype
             if generation > introduce_diversity_at*restart_count:
                 self.initialize_population.introduceDiversity(geno)
                 restart_count += 1
 
-            #if generation%10000 == 0: print "generation:\t", generation,'\n',geno
+            if generation%1000 == 0: print "generation:\t", generation
 
             self.fitness.start(geno)
-            if geno.getMaxFitness() >= 1: break
+            if geno.getMaxFitness() >= threshold: break
 
             self.mutation.start(geno)
 
             self.crossover.start(geno)
 
             generation+=1
+            count+=len(geno.chromosomes)
 
         #if geno.getMostFit().fitness != 1:
         #    print 'geno\n',geno
+        print "COUNT: ", count
         return geno.getMostFit(), generation
