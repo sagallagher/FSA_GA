@@ -38,9 +38,10 @@ class GeneticAlgorithm():
             self.crossover.start(geno)
 
             generation+=1
+            # track how many solutions we have checked
             count+=len(geno.chromosomes)
 
-        #if geno.getMostFit().fitness != 1:
-        #    print 'geno\n',geno
-        print "COUNT: ", count
-        return geno.getMostFit(), generation
+
+        if generation >= give_up_at: count = -count
+
+        return geno.getMostFit(), count
