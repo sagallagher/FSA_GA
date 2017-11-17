@@ -26,7 +26,7 @@ if __name__ == '__main__':
     # prefix to place on numbered outputted files
     DIRECTORY = 'Data/Dataset1/'
     # number of learning data sets to generate
-    FILES_TO_GENERATE = 100
+    FILES_TO_GENERATE = 1000
     # number of examples to include in each file
     EXAMPLES_PER_FILE = 10
     # the size of the alphabet to use
