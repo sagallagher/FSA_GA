@@ -15,7 +15,7 @@ class GeneticAlgorithm():
         restart_count = 1
         self.initialize_population.start(geno)
         self.fitness.start(geno)
-        count = 0
+        count = len(geno.chromosomes)
         while(True):
             '''
             If N generations pass without progress to the overall fitness of the
