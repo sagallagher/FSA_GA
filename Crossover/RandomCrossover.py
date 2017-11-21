@@ -48,17 +48,35 @@ class RandomCrossover():
 
 
         # one point crossover on rows
-        child1.fsm = parent1.fsm[:random_pivot] + parent2.fsm[random_pivot:]
-        child2.fsm = parent2.fsm[random_pivot:] + parent2.fsm[:random_pivot]
+        child1.fsm = parent1.fsm[:random_pivot:] + parent2.fsm[random_pivot:]
+        child2.fsm = parent2.fsm[:random_pivot] + parent1.fsm[random_pivot:]
         '''
         crossover in such a way that the final states follow its associated rows
-        during the crossover?
+        during the crossover
         '''
+
+        # child1 gets tail of parent1 and head of parents2
+        for row in xrange(random_pivot):
+            if row in parent1.final_states:
+                child1.final_states.append(row)
+            if row in parent2.final_states:
+                child2.final_states.append(row)
+
+        for row in range(random_pivot,len(parent2.fsm)):
+            if row in parent1.final_states:
+                child2.final_states.append(row)
+            if row in parent2.final_states:
+                child1.final_states.append(row)
+
+
+        # child2 gets tail of parent2 and head of parent1
+        '''
+        # ^Above method performs better
         random_pivot2 = randint(0, len(parent2.final_states))
         # one point crossover on final states
         child1.final_states = parent1.final_states[:random_pivot2] + parent2.final_states[random_pivot2:]
         child2.final_states = parent2.final_states[random_pivot2:] + parent2.final_states[:random_pivot2]
-
+        '''
 
     # replace the least fit chromosomes with the offspring of the most fit
     def selectSurvivors(self, child1, child2, genotype):

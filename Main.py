@@ -17,6 +17,9 @@ if __name__ == '__main__':
                             # USER SETTINGS
 ################################################################################
 
+    # generate random files?
+    RANDOM_GEN = True
+
     # file to output results in
     OUTPUT_FILE = 'output.txt'
 
@@ -26,11 +29,11 @@ if __name__ == '__main__':
     # prefix to place on numbered outputted files
     DIRECTORY = 'Data/Dataset1/'
     # number of learning data sets to generate
-    FILES_TO_GENERATE = 1000
+    FILES_TO_GENERATE = 15
     # number of examples to include in each file
     EXAMPLES_PER_FILE = 10
     # the size of the alphabet to use
-    ALPHABET_SIZE = 2
+    ALPHABET_SIZE = 10
     # minimum length of each example word
     MINIMUM_LENGTH = 0
     # maximum length of each example word
@@ -74,17 +77,18 @@ if __name__ == '__main__':
 
 
 
+    if RANDOM_GEN:
+        # clear directory
+        for the_file in os.listdir(DIRECTORY): os.unlink(os.path.join(DIRECTORY, the_file))
+
+        rlg = RandomLearningGenerator(DIRECTORY,FILES_TO_GENERATE,EXAMPLES_PER_FILE,
+            ALPHABET_SIZE,MINIMUM_LENGTH,MAXIMUM_LENGTH)
+
+        rlg.generateLearningData()
 
 
-    # clear directory
-    for the_file in os.listdir(DIRECTORY): os.unlink(os.path.join(DIRECTORY, the_file))
+    #f = open(OUTPUT_FILE, 'w').close()
 
-    rlg = RandomLearningGenerator(DIRECTORY,FILES_TO_GENERATE,EXAMPLES_PER_FILE,
-        ALPHABET_SIZE,MINIMUM_LENGTH,MAXIMUM_LENGTH)
-
-    rlg.generateLearningData()
-
-    f = open(OUTPUT_FILE, 'w').close()
     for filename in os.listdir(DIRECTORY):
         print "Parsing:\t", filename
         dp = DataParser(os.path.join(DIRECTORY, filename))
