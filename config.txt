@@ -2,7 +2,7 @@
 # USER SETTINGS
 ################################################################################
 # generate random files
-RANDOM_GEN = False
+RANDOM_GEN = True
 
 # file to output results in
 OUTPUT_FILE = output.txt
