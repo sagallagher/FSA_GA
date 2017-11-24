@@ -21,7 +21,7 @@ class Tester():
         ################################################################################
 
             # generate random files?
-            RANDOM_GEN = bool(self.cp.getSetting('RANDOM_GEN'))
+            RANDOM_GEN = self.cp.getSetting('RANDOM_GEN').lower() == 'true'
 
             # file to output results in
             OUTPUT_FILE = str(self.cp.getSetting('OUTPUT_FILE'))
@@ -69,8 +69,6 @@ class Tester():
         ################################################################################
 
         ################################################################################
-
-
 
             if RANDOM_GEN:
                 # clear directory

@@ -11,5 +11,7 @@ if __name__ == '__main__':
     if not cp.parse(sys.argv[1]): exit()
     # send the configuration file to the tester so it can use the settings provided
     t = Tester(cp)
+    print cp.settings
+
     # run the tests
     t.run()
