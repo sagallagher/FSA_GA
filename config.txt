@@ -27,7 +27,7 @@ MAXIMUM_LENGTH = 10
 # GENETIC ALGORITHM SETTINGS
 ################################################################################
 # add another random individual to the population at this generation
-DIVERSITY_AT = 1000
+DIVERSITY_AT = 10000
 # stop pursing current learning data set when there is a chromosome of this fitness
 THRESHOLD = 1
 # generation to stop pursuing the current learning data set

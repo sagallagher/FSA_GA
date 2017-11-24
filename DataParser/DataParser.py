@@ -1,4 +1,3 @@
-# needs to split the word in case there are more than 9 symbols in alphabet
 class DataParser():
 
     # constructor
@@ -33,18 +32,7 @@ class DataParser():
                 split_line = line.split(':')
                 self.learning_data[split_line[0]] = split_line[1]
         self.setAlphabetSize()
-        '''
-        try:
-            with open(self.data_file, 'r') as f:
-                for line in f:
-                    split_line = line.split(':')
-                    self.learning_data[split_line[0].split(' ')] = split_line[1]
-            self.setAlphabetSize()
 
-        except:
-            print('Could not read data file: ' + self.data_file)
-            exit()
-        '''
 
     # return data_matrix
     def getLearningData(self): return self.learning_data

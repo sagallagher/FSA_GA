@@ -81,7 +81,7 @@ class Tester():
 
                 rlg.generateLearningData()
 
-
+            # clear the output file
             f = open(OUTPUT_FILE, 'w').close()
 
             for filename in os.listdir(DIRECTORY):

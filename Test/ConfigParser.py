@@ -4,10 +4,14 @@ class ConfigParser():
         self.settings = {}
 
     def parse(self,config_file):
-        f = open(config_file,'r')
+        try: f = open(config_file,'r')
+        except:
+            print "Could not find configuration file"
+            return False
 
         for line in f:
-
+            # skip empty or commented lines
+            # comments start with #
             if len(line) <= 1 or line[0] == ' 'or line[0] == '#': pass
 
             else:
@@ -16,13 +20,15 @@ class ConfigParser():
                 try:
                     key = split_line[0]
                     value = split_line[1]
+                    # strip white space key and value and strip new line from char from value
                     self.settings[key.replace(' ', '')] = value.replace(' ','').replace('\n','')
                 except:
-                    print "Could not parse configuration file", key
-                    return -1
+                    print 'Could not parse key:\t', key
+                    return False
 
 
         f.close()
+        return True
 
     def getSetting(self,key):
         try: return self.settings[key]

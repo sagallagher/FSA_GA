@@ -1,141 +1,137 @@
 0.txt
-Solutions Checked:	950
+Solutions Checked:	30180
 Fitness:	1.0
-Final States:	  2 4
-           2           4
-           3           1
-           0           3
+Final States:	  2 3
+           0           1
            2           0
-           2           2
-
-1.txt
-Solutions Checked:	2560
-Fitness:	1.0
-Final States:	  1
            1           3
            3           2
-           2           1
-           1           1
+
+1.txt
+Solutions Checked:	35910
+Fitness:	1.0
+Final States:	  3
            1           0
+           3           3
+           3           2
+           2           2
 
 10.txt
-Solutions Checked:	17611
+Solutions Checked:	54110
 Fitness:	1.0
-Final States:	  1 2
-           2           1
-           3           0
-           2           0
-           3           1
+Final States:	  0 2 4
+           4           2
+           1           3
+           2           3
+           0           2
+           1           2
 
 11.txt
-Solutions Checked:	47956
+Solutions Checked:	33630
 Fitness:	1.0
-Final States:	  2 0 3
+Final States:	  3 0
            2           1
-           4           0
-           4           0
-           4           2
+           2           3
+           0           1
            3           0
 
 12.txt
-Solutions Checked:	3770
+Solutions Checked:	22650
 Fitness:	1.0
-Final States:	  3 0
-           3           0
-           1           1
-           0           3
-           1           1
-           1           3
+Final States:	  3 2
+           3           3
+           3           2
+           2           0
+           3           2
 
 13.txt
-Solutions Checked:	4040
+Solutions Checked:	10
 Fitness:	1.0
-Final States:	  3 1
+Final States:	  0 1
+           0           1
            1           0
-           2           1
-           3           3
-           0           0
 
 14.txt
-Solutions Checked:	6620
+Solutions Checked:	11110
 Fitness:	1.0
-Final States:	  3
+Final States:	  3 1
            3           2
-           1           3
-           0           4
-           4           4
+           3           2
+           1           1
            0           1
 
 2.txt
-Solutions Checked:	2390
+Solutions Checked:	920
 Fitness:	1.0
-Final States:	  4 2 1
-           1           0
-           3           0
-           0           4
+Final States:	  2 0
+           1           1
            3           2
-           1           4
-
-3.txt
-Solutions Checked:	1920
-Fitness:	1.0
-Final States:	  1 0
            0           2
            2           0
-           1           2
+
+3.txt
+Solutions Checked:	4020
+Fitness:	1.0
+Final States:	  3
+           2           1
+           3           3
+           3           1
+           4           3
+           3           2
 
 4.txt
-Solutions Checked:	4580
+Solutions Checked:	3480
 Fitness:	1.0
-Final States:	  1
-           0           1
-           2           0
-           1           2
+Final States:	  3 1
+           4           1
+           2           1
+           4           4
+           4           4
+           1           3
 
 5.txt
-Solutions Checked:	80
+Solutions Checked:	21500
 Fitness:	1.0
-Final States:	  0
-           1           1
-           1           2
-           1           0
+Final States:	  2 1
+           0           1
+           2           3
+           0           0
+           2           3
 
 6.txt
-Solutions Checked:	28966
-Fitness:	1.0
-Final States:	  3 4
-           1           1
-           4           1
-           3           1
+Solutions Checked:	-100000
+Fitness:	0.777777777778
+Final States:	  1 2
            2           3
-           3           0
+           3           1
+           0           3
+           2           0
 
 7.txt
-Solutions Checked:	12936
+Solutions Checked:	530
 Fitness:	1.0
-Final States:	  1 3
-           2           2
-           2           3
-           1           2
+Final States:	  3 1
+           3           3
+           2           0
+           0           0
+           4           0
            1           1
 
 8.txt
-Solutions Checked:	1820
+Solutions Checked:	7470
 Fitness:	1.0
-Final States:	  0 1 4 3
-           3           3
-           0           3
-           2           2
-           1           2
-           1           0
-
-9.txt
-Solutions Checked:	6980
-Fitness:	1.0
-Final States:	  4 1
-           2           4
-           0           1
+Final States:	  1 2 3
            0           2
            4           1
-           3           2
+           4           0
+           3           0
+           2           0
+
+9.txt
+Solutions Checked:	3430
+Fitness:	1.0
+Final States:	  0
+           0           2
+           1           0
+           1           2
 
