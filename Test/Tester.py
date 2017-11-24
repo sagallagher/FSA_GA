@@ -9,7 +9,7 @@ from LearningDataGenerator.RandomLearningDataGenerator import *
 
 import os
 
-class RandomTester():
+class Tester():
 
     def __init__(self, config_parser):
         self.cp = config_parser
@@ -69,14 +69,6 @@ class RandomTester():
         ################################################################################
 
         ################################################################################
-
-
-
-
-
-
-
-
 
 
 
