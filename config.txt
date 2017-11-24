@@ -1,0 +1,50 @@
+################################################################################
+# USER SETTINGS
+################################################################################
+# generate random files
+RANDOM_GEN = True
+
+# file to output results in
+OUTPUT_FILE = output.txt
+
+################################################################################
+# LEARNING DATA GENERATOR SETTINGS
+################################################################################
+# prefix to place on numbered outputted files
+DIRECTORY = Data/Dataset1/
+# number of learning data sets to generate
+FILES_TO_GENERATE = 15
+# number of examples to include in each file
+EXAMPLES_PER_FILE = 10
+# the size of the alphabet to use
+ALPHABET_SIZE = 2
+# minimum length of each example word
+MINIMUM_LENGTH = 0
+# maximum length of each example word
+MAXIMUM_LENGTH = 10
+
+################################################################################
+# GENETIC ALGORITHM SETTINGS
+################################################################################
+# add another random individual to the population at this generation
+DIVERSITY_AT = 1000
+# stop pursing current learning data set when there is a chromosome of this fitness
+THRESHOLD = 1
+# generation to stop pursuing the current learning data set
+GIVE_UP = 10000
+# the number of randomly generated FSMs to include in the initial population
+POPULATION_SIZE = 10
+# the minimum number of states for each FSM
+MIN_STATES = 2
+# the maximum number of states for each FSM
+MAX_STATES = 5
+
+################################################################################
+
+################################################################################
+
+################################################################################
+                            # END USER SETTINGS
+################################################################################
+
+################################################################################
