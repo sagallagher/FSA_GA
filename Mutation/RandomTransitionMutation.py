@@ -1,13 +1,14 @@
+# replace a random transition with a random transition in the FSM
+# of each chromosome in a given genotype
+
 from random import randint
+
 class RandomTransitionMutation():
 
     def __init__(self, dp):
-
         self.alphabet_size = dp.alphabet_size
 
-
     def mutateGenotype(self, genotype):
-
         for chromosome in genotype.chromosomes:
             if len(chromosome.fsm) == 0: break
             number_of_states = len(chromosome.fsm)
