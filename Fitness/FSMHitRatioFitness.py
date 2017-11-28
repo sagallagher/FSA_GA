@@ -1,11 +1,14 @@
 
 class FSMHitRatioFitness():
-
+    
+    # take in a dataparser object 
+    # because we need the learning data dic and alphabet size from it
     def __init__(self, dp):
         self.learning_data = dp.learning_data
         self.alphabet_size = dp.alphabet_size
 
-
+    # return the percentage of training examples 
+    # the chromosome's FSM got correct
     def evalFSM(self, chromosome):
 
         fsm = chromosome.fsm
@@ -42,6 +45,7 @@ class FSMHitRatioFitness():
         # the fitness is percentage of examples the FSM got correct
         return float(correct)/len(self.learning_data)
 
+    # set the fitness for each chromosome in the genotype
     def setFitness(self, genotype):
         for chromosome in genotype.chromosomes:
             chromosome.fitness = self.evalFSM(chromosome)
