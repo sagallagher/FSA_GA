@@ -73,10 +73,10 @@ def bestAverage(directory):
         solution_list = getSolutionCountList(os.path.join(directory,outfile))
 
         average = np.mean(solution_list)
-
+        print solution_list, average
         if (average < best or best == -1) and average >= 0:
             best = average
-            result = str(outfile)
+            result = str(outfile)+'\t'+str(average)
 
 
     return result
@@ -99,12 +99,12 @@ def displayStats(directory):
         print 'MEAN:%20s'% mean
         print "MEDIAN:%20s" % median
         print "GIVE UP:%20s" % give_up
-        print "BEST AVG:%20s" % bestAverage(directory)
+    print "\nBEST AVG:%20s" % bestAverage(directory)
 
 # plot the average solutions checked in each file
 def plotAverages(directory):
     pass
-    
+
 
 displayStats(sys.argv[1])
 plotOutputs(sys.argv[1])

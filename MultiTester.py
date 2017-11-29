@@ -12,6 +12,9 @@ class MultiTester():
 
         t.run()
 
+    def incrementConfigFile(self):
+        pass
+        
     def generateMultOutput(self, output_dir, output_count):
 
         for i in range(output_count):
@@ -20,6 +23,10 @@ class MultiTester():
             self.cp.settings['ALPHABET_SIZE'] = i+2
             self.generateOneOutput()
 
+    def run(self,output_dir):
+        c = ConfigParser()
+        c.parse('config.txt')
+        m = MultiTester(c)
 
 c = ConfigParser()
 c.parse('config.txt')

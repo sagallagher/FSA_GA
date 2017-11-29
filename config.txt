@@ -21,7 +21,7 @@ ALPHABET_SIZE = 2
 # minimum length of each example word
 MINIMUM_LENGTH = 0
 # maximum length of each example word
-MAXIMUM_LENGTH = 10
+MAXIMUM_LENGTH = 100
 
 FILE_PREFIX = 0
 ################################################################################
