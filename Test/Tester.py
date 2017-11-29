@@ -54,12 +54,13 @@ class Tester():
         # the maximum number of states for each FSM
         self.MAX_STATES = int(config_parser.getSetting('MAX_STATES'))
 
+        self.FILE_PREFIX = int(config_parser.getSetting('FILE_PREFIX'))
 
     # generate random files in the given directory
     def generateRandomFiles(self):
-        for the_file in os.listdir(self.DIRECTORY): os.unlink(os.path.join(self.DIRECTORY, the_file))
+        #for the_file in os.listdir(self.DIRECTORY): os.unlink(os.path.join(self.DIRECTORY, the_file))
         # construct a RandomLearningGenator to generate random training datasets
-        rlg = RandomLearningGenerator(self.DIRECTORY,self.FILES_TO_GENERATE,self.EXAMPLES_PER_FILE,
+        rlg = RandomLearningGenerator(self.DIRECTORY,self.FILE_PREFIX, self.FILES_TO_GENERATE,self.EXAMPLES_PER_FILE,
             self.ALPHABET_SIZE,self.MINIMUM_LENGTH,self.MAXIMUM_LENGTH)
 
         # use the object to generate the desired number of files with the given properties

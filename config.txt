@@ -13,7 +13,7 @@ OUTPUT_FILE = output.txt
 # prefix to place on numbered outputted files
 DIRECTORY = Data/Dataset1/
 # number of learning data sets to generate
-FILES_TO_GENERATE = 15
+FILES_TO_GENERATE = 2
 # number of examples to include in each file
 EXAMPLES_PER_FILE = 10
 # the size of the alphabet to use
@@ -23,15 +23,16 @@ MINIMUM_LENGTH = 0
 # maximum length of each example word
 MAXIMUM_LENGTH = 10
 
+FILE_PREFIX = 0
 ################################################################################
 # GENETIC ALGORITHM SETTINGS
 ################################################################################
 # add another random individual to the population at this generation
-DIVERSITY_AT = 10000
+DIVERSITY_AT = 1000
 # stop pursing current learning data set when there is a chromosome of this fitness
 THRESHOLD = 1
 # generation to stop pursuing the current learning data set
-GIVE_UP = 10000
+GIVE_UP = 5000
 # the number of randomly generated FSMs to include in the initial population
 POPULATION_SIZE = 10
 # the minimum number of states for each FSM

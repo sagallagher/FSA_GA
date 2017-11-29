@@ -2,14 +2,15 @@ from random import randint
 
 class RandomLearningGenerator():
 
-    def __init__(self, file_prefix,files_to_generate, examples_per_file,
+    def __init__(self, directory, file_prefix,files_to_generate, examples_per_file,
         alphabet_size, min_word_length, max_word_length):
             self.files_to_generate = files_to_generate
             self.examples_per_file = examples_per_file
             self.alphabet_size = alphabet_size
-            self.file_prefix = file_prefix
+            self.file_prefix = str(file_prefix)
             self.min_word_length = min_word_length
             self.max_word_length = max_word_length
+            self.directory = directory
 
     def generateOneFile(self, file_name):
         with open(file_name, 'w') as f:
@@ -25,4 +26,4 @@ class RandomLearningGenerator():
 
     def generateLearningData(self):
         for file_number in xrange(self.files_to_generate):
-            self.generateOneFile(self.file_prefix+str(file_number)+'.txt')
+            self.generateOneFile(self.directory+self.file_prefix+str(file_number)+'.txt')
