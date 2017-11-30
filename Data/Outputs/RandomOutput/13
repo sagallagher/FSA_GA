@@ -1,0 +1,28 @@
+130.txt
+Solutions Checked:	10
+Fitness:	1.0
+Final States:	  4 6 2
+           4           5           6           5           5
+           3           5           5           2           6
+           1           4           4           3           5
+           2           0           3           6           2
+           6           6           2           4           0
+           3           4           2           1           2
+           3           3           0           5           5
+
+131.txt
+Solutions Checked:	150
+Fitness:	1.0
+Final States:	  0
+           5           8           9           8           5
+           3           6           7           9           4
+           9           1           4           5           2
+           1           8           0           8           4
+           0           4           7           3           2
+           6           0           9           0           9
+           5           2           4           6           2
+           9           2           2           6           0
+           0           0           6           2           4
+           8           1           1           6           5
+
+[10, 150]

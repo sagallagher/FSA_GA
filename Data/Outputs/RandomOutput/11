@@ -1,0 +1,19 @@
+111.txt
+Solutions Checked:	10
+Fitness:	1.0
+Final States:	  2 3
+           1           3           1           2           1
+           3           4           2           3           4
+           2           0           4           2           4
+           2           2           0           3           0
+           1           4           1           1           4
+
+110.txt
+Solutions Checked:	10
+Fitness:	1.0
+Final States:	  1
+           0           2           1           2           2
+           1           1           1           0           1
+           1           2           0           2           0
+
+[10, 10]

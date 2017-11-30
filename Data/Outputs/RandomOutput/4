@@ -1,0 +1,17 @@
+40.txt
+Solutions Checked:	130
+Fitness:	1.0
+Final States:	  1 2
+           0           0           0           2           0
+           2           2           2           0           2
+           2           0           1           0           1
+
+41.txt
+Solutions Checked:	110
+Fitness:	1.0
+Final States:	  1
+           2           1           0           2           1
+           0           0           1           0           1
+           0           0           2           1           1
+
+[130, 110]
