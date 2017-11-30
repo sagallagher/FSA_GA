@@ -59,6 +59,40 @@ def plotOutputs(directory, clear_ticks = False):
     plt.tight_layout()
     plt.show()
 
+
+def plotAllOneGraph(directory):
+
+    solutions = []
+
+    outfiles = []
+    # loop through each output file
+    for outfile in os.listdir(directory):
+        # store the file
+        outfiles.append(int(outfile))
+
+    # sort the output files in ascending order
+    outfiles = sorted(outfiles)
+
+    for ofile in outfiles:
+        # get the solutions on last line
+        solution_list = getSolutionCountList(directory+'/'+str(ofile))
+
+        # append the list to all solulution 2d array
+        solutions.append(solution_list)
+
+    # loop through each row in the array
+    plt.scatter([i for i in xrange(len(solutions)*len(solutions[0]))],solutions)
+
+    # display graph
+    plt.legend = True
+
+    plt.ylabel('Solutions Checked')
+    plt.xlabel('FSM #')
+    plt.title('Solutions Checked by FSM')
+    plt.show()
+
+
+
 # given a list of output files, return the one that contains the best average
 def bestAverage(directory):
 
@@ -107,4 +141,4 @@ def plotAverages(directory):
 
 
 displayStats(sys.argv[1])
-plotOutputs(sys.argv[1])
+plotAllOneGraph(sys.argv[1])

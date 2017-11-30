@@ -1,13 +1,13 @@
 
 class FSMHitRatioFitness():
-    
-    # take in a dataparser object 
+
+    # take in a dataparser object
     # because we need the learning data dic and alphabet size from it
     def __init__(self, dp):
         self.learning_data = dp.learning_data
         self.alphabet_size = dp.alphabet_size
 
-    # return the percentage of training examples 
+    # return the percentage of training examples
     # the chromosome's FSM got correct
     def evalFSM(self, chromosome):
 
@@ -32,7 +32,19 @@ class FSMHitRatioFitness():
 
             else:
                 # go through the FSM
-                for element in example: row = fsm[row][int(element)]
+                for element in example:
+                    try: row = fsm[row][int(element)-1]
+                    except:
+                        # error occuring if
+                        print "APLHABET SIZE:\t", self.alphabet_size
+                        print "ROW\t",row
+                        print "ELEMENT\t",element
+                        print "EXAMPLE\t", example
+                        print "FSM:\n"
+                        for row in fsm:
+                            print row
+                        print "*EXITING*"
+                        exit()
 
                 # if you end on a final state and you should have, you got one correct
                 if (row in chromosome.final_states

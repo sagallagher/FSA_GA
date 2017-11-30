@@ -18,11 +18,18 @@ class DataParser():
         return result
 
     def setAlphabetSize(self):
-        alphabet = []
+        max_int = 0
+
         for key in self.learning_data:
-            for character in key:
-                if character not in alphabet: alphabet.append(character)
-        self.alphabet_size = len(alphabet)-1
+            key = key.replace('\n','').split(' ')
+
+            for char in key:
+                if char is not '' and int(char) > max_int:
+                        max_int = int(char)
+
+        self.alphabet_size = max_int+1
+
+
 
     # read the data file into data_matrix
     def readDataFile(self):
