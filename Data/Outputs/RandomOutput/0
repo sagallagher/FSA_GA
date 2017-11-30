@@ -1,16 +1,19 @@
 01.txt
 Solutions Checked:	10
 Fitness:	1.0
-Final States:	  1 0
-           0           1           1           2           2
-           2           1           0           0           1
-           1           1           1           0           1
+Final States:	  1
+           0           1           1           1           0
+           1           0           0           1           0
 
 00.txt
 Solutions Checked:	10
 Fitness:	1.0
-Final States:	  1
-           0           0           0           0           0
-           0           1           1           1           0
+Final States:	  5 2 0
+           2           5           4           3           0
+           1           0           3           2           5
+           1           4           3           0           3
+           0           4           2           3           5
+           0           5           3           0           0
+           0           1           1           2           2
 
 [10, 10]

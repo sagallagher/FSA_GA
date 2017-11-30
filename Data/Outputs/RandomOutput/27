@@ -1,24 +1,19 @@
 270.txt
-Solutions Checked:	2180
+Solutions Checked:	1950
 Fitness:	1.0
-Final States:	  5 6 1
-           4           1           5           1           0
-           6           2           6           6           1
-           1           0           4           1           5
-           0           0           3           2           3
-           0           6           3           1           6
-           0           1           3           5           1
-           6           0           4           5           4
+Final States:	  2
+           3           1           1           3           1
+           3           1           2           2           2
+           3           2           1           0           3
+           2           2           3           1           2
 
 271.txt
-Solutions Checked:	2070
+Solutions Checked:	220
 Fitness:	1.0
-Final States:	  0 5 4 3
-           3           3           5           1           4
-           2           3           0           2           5
-           0           0           2           0           4
-           3           2           5           4           1
-           5           2           1           4           5
-           1           4           5           1           3
+Final States:	  0 3
+           0           2           2           2           3
+           1           3           3           3           3
+           2           3           0           0           3
+           3           2           1           3           0
 
-[2180, 2070]
+[1950, 220]

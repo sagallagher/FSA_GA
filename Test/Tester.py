@@ -5,7 +5,7 @@ from GeneticAlgorithm.GeneticOperator.Crossover.RandomCrossover import *
 from GeneticAlgorithm.GeneticOperator.Mutation.RandomTransitionMutation import *
 from GeneticAlgorithm.Genotype import *
 from GeneticAlgorithm.GeneticAlgorithm import *
-from GeneticAlgorithm.Test.LearningDataGenerator.RandomLearningDataGenerator import *
+from Test.LearningDataGenerator.RandomLearningDataGenerator import *
 
 import os
 

@@ -1,5 +1,5 @@
-from GeneticAlgorithm.Test.Tester import *
-from GeneticAlgorithm.Test.ConfigParser import *
+from Test.Tester import *
+from Test.ConfigParser import *
 import sys
 import os, os.path
 class MultiTester():
