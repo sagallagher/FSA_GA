@@ -1,0 +1,28 @@
+540.txt
+Solutions Checked:	10
+Fitness:	1.0
+Final States:	  4 5 9 6 8 2
+           0           9           1           6           7
+           8           3           0           9           3
+           3           0           6           7           9
+           3           1           5           7           1
+           3           7           1           0           0
+           0           4           1           4           7
+           1           1           6           0           1
+           8           4           9           1           5
+           2           1           0           2           8
+           8           8           4           3           8
+
+541.txt
+Solutions Checked:	500
+Fitness:	1.0
+Final States:	  6 3 2 1
+           3           1           3           4           2
+           3           2           2           1           3
+           1           3           4           0           6
+           3           0           3           0           1
+           3           4           5           5           6
+           4           5           3           5           5
+           4           3           0           4           2
+
+[10, 500]

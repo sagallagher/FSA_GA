@@ -109,4 +109,4 @@ class Tester():
         # at the directory provided in the config file
         if self.RANDOM_GEN: self.generateRandomFiles()
         # clear the output file
-        print self.testDirectory()
+        self.testDirectory()

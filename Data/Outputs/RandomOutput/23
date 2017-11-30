@@ -1,0 +1,24 @@
+230.txt
+Solutions Checked:	20
+Fitness:	1.0
+Final States:	  4 3 1
+           1           7           7           0           3
+           6           0           4           0           2
+           3           1           5           0           3
+           6           5           3           6           2
+           4           2           6           0           2
+           4           1           5           1           3
+           5           0           2           3           1
+           0           6           1           0           6
+
+231.txt
+Solutions Checked:	10
+Fitness:	1.0
+Final States:	  4 1
+           4           1           4           4           1
+           0           1           2           4           1
+           3           4           1           2           4
+           1           1           0           3           2
+           4           3           4           1           2
+
+[20, 10]

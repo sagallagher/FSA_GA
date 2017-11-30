@@ -36,13 +36,13 @@ MAXIMUM_LENGTH = 25
 
 OUTPUT_DIRECTORY = /home/me/scripts/python/AutoAutomata/FSA_GA/Data/Outputs/RandomOutput
 # the size to begin testing
-MIN_ALPHABET_SIZE = 3
+MIN_ALPHABET_SIZE = 2
 # the size to end testing
-MAX_ALPHABET_SIZE = 5
+MAX_ALPHABET_SIZE = 10
 # the minimum examples to start with in each file
 MIN_EXAMPLES_PER_FILE = 1
 # the max examples to start with in each file
-MAX_EXAMPLES_PER_FILE = 5
+MAX_EXAMPLES_PER_FILE = 10
 
 # [(3-2)+1] * [(4-1)+1] * files_to_gen = max_x_label
 

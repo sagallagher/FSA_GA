@@ -51,9 +51,6 @@ class GeneticAlgorithm():
                 self.initialize_population.introduceDiversity(geno)
                 restart_count += 1
 
-            # display the generation count every 1000 generations
-            if generation%1000 == 0: print "generation:\t", generation
-
             # calculate the fitness of the population
             self.fitness.start(geno)
 

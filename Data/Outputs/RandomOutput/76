@@ -1,0 +1,20 @@
+760.txt
+Solutions Checked:	820
+Fitness:	1.0
+Final States:	  1
+           1           1           1           0           1
+           0           0           1           0           0
+
+761.txt
+Solutions Checked:	20
+Fitness:	1.0
+Final States:	  2 4 3 6 1
+           4           6           4           3           4
+           3           2           0           3           4
+           6           3           1           0           4
+           5           5           3           2           0
+           6           4           5           5           1
+           4           4           3           0           5
+           6           5           5           6           2
+
+[820, 20]

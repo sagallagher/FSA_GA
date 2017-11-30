@@ -1,0 +1,17 @@
+480.txt
+Solutions Checked:	330
+Fitness:	1.0
+Final States:	  1
+           1           0           1           0           1
+           0           0           1           0           1
+
+481.txt
+Solutions Checked:	2780
+Fitness:	1.0
+Final States:	  0
+           0           0           2           2           3
+           0           0           2           3           0
+           3           0           2           0           1
+           2           1           3           2           1
+
+[330, 2780]

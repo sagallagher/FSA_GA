@@ -38,5 +38,3 @@ if __name__ == '__main__':
     if int(cp.getSetting('TEST_OPTION')) == 1: testOne(cp)
 
     elif int(cp.getSetting('TEST_OPTION')) == 2:  multiTest(cp)
-
-    else: print "A",cp.getSetting('TEST_OPTION')
