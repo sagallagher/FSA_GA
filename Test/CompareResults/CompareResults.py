@@ -69,7 +69,10 @@ class CompareResults():
         ax = fig.add_subplot(111, projection='3d')
 
         ax.scatter(x, y, z, c='r', marker='o')
-        plt.show()
+        ax.set_zlabel('Solutions Checked')
+        ax.set_xlabel('Alphabet Size')
+        ax.set_ylabel('Examples per File')
+
 
     # two graphs, one with x-axis as alphabet size, one with x-axis as
     def plotAllOneGraph(self,min_alph,max_alph,min_ex,max_ex,files_to_gen):
@@ -129,8 +132,10 @@ class CompareResults():
 
         # display graph
         plt.tight_layout()
-        plt.show()
+
         self.plot3D(x,y,solutions)
+
+        plt.show()
 
 
 

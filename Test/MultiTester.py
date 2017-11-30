@@ -16,9 +16,6 @@ class MultiTester():
 
         t.run()
 
-    def incrementConfigFile(self):
-        pass
-
     # generate (ALPHABET_SIZE-min) * (EXAMPLES_PER_FILE-min) outputs
     def generateMultOutput(self, output_dir):
 

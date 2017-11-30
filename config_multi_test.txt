@@ -38,11 +38,11 @@ OUTPUT_DIRECTORY = /home/me/scripts/python/AutoAutomata/FSA_GA/Data/output/tout
 # the size to begin testing
 MIN_ALPHABET_SIZE = 2
 # the size to end testing
-MAX_ALPHABET_SIZE = 10
+MAX_ALPHABET_SIZE = 5
 # the minimum examples to start with in each file
 MIN_EXAMPLES_PER_FILE = 1
 # the max examples to start with in each file
-MAX_EXAMPLES_PER_FILE = 20
+MAX_EXAMPLES_PER_FILE = 10
 
 # [(3-2)+1] * [(4-1)+1] * files_to_gen = max_x_label
 
@@ -60,7 +60,7 @@ GIVE_UP = 10000
 # the number of randomly generated FSMs to include in the initial population
 POPULATION_SIZE = 10
 # the minimum number of states for each FSM
-MIN_STATES = 5
+MIN_STATES = 2
 # the maximum number of states for each FSM
 MAX_STATES = 10
 
