@@ -1,22 +1,21 @@
 80.txt
-Solutions Checked:	10
+Solutions Checked:	40
 Fitness:	1.0
 Final States:	  1
-           0           0           1           1           0
+           0           1           0           1           0
            0           0           0           1           0
 
 81.txt
-Solutions Checked:	1590
+Solutions Checked:	10
 Fitness:	1.0
-Final States:	  1 6
-           7           6           7           1           0
-           2           4           6           6           4
-           6           8           4           7           4
-           1           0           3           3           3
-           7           8           2           5           5
-           0           3           8           2           6
-           4           0           1           4           6
-           5           4           5           4           1
-           6           0           7           0           1
+Final States:	  3 5 6
+           5           3           7           1           7
+           5           4           4           1           4
+           7           0           2           5           5
+           0           3           6           3           7
+           7           6           4           5           1
+           6           1           5           7           1
+           4           7           4           7           1
+           1           4           0           2           6
 
-[10, 1590]
+[40, 10]
