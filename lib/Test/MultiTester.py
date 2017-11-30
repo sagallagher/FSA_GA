@@ -43,7 +43,9 @@ class MultiTester():
                 self.cp.settings['EXAMPLES_PER_FILE'] = j
                 filenum+=1
 
-                if (filenum/float(total)*100)%10 == 0: print "Complete:%12.0f%%" % (filenum/float(total)*100)
+                #if (filenum/float(total)*100)%1== 0:
+
+                print "Complete:%12.0f%%" % (filenum/float(total)*100)
 
                 self.generateOneOutput()
 

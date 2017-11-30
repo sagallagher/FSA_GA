@@ -4,12 +4,12 @@
 # generate random files
 RANDOM_GEN = True
 
-# file to output results in
+# file to output results in for a single test
 OUTPUT_FILE = output.txt
 
 # which test to run
 # 1 => Single Directory Test
-# 2 => Generate Random Tests
+# 2 => Generate Random Tests | RANDOM_GEN must be true for this to work
 TEST_OPTION = 2
 
 ################################################################################
@@ -38,13 +38,12 @@ OUTPUT_DIRECTORY = /home/me/scripts/python/AutoAutomata/FSA_GA/data/Outputs/Rand
 # the size to begin testing
 MIN_ALPHABET_SIZE = 2
 # the size to end testing
-MAX_ALPHABET_SIZE = 10
+MAX_ALPHABET_SIZE = 4
 # the minimum examples to start with in each file
 MIN_EXAMPLES_PER_FILE = 1
 # the max examples to start with in each file
-MAX_EXAMPLES_PER_FILE = 10
+MAX_EXAMPLES_PER_FILE = 5
 
-# [(3-2)+1] * [(4-1)+1] * files_to_gen = max_x_label
 
 FILE_PREFIX = 0
 
@@ -60,7 +59,7 @@ GIVE_UP = 10000
 # the number of randomly generated FSMs to include in the initial population
 POPULATION_SIZE = 10
 # the minimum number of states for each FSM
-MIN_STATES = 2
+MIN_STATES = 5
 # the maximum number of states for each FSM
 MAX_STATES = 10
 

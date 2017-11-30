@@ -1,15 +1,15 @@
 t2.txt
-Solutions Checked:	40
+Solutions Checked:	100
 Fitness:	1.0
 Final States:	  1
            0           1
            0           1
 
 training_set1.txt
-Solutions Checked:	40
+Solutions Checked:	290
 Fitness:	1.0
 Final States:	  1
            0           1
            0           1
 
-[40, 40]
+[100, 290]

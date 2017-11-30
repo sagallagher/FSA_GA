@@ -119,7 +119,7 @@ class CompareResults():
                 for b in xrange(files_to_gen):
                     y.append(j)
 
-        can[1].scatter(x,solutions)
+        can[1].scatter(y,solutions)
 
         can[1].set_ylabel('Solutions Checked')
         can[1].set_xlabel('Examples per File')
