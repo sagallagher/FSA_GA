@@ -1,0 +1,21 @@
+661.txt
+Solutions Checked:	1980
+Fitness:	1.0
+Final States:	  5 1
+           2           3           7           5           1
+           1           2           7           3           4
+           1           7           5           5           5
+           6           0           5           6           6
+           1           7           0           2           3
+           2           5           4           6           2
+           5           6           6           7           0
+           6           0           5           7           3
+
+660.txt
+Solutions Checked:	420
+Fitness:	1.0
+Final States:	  1
+           0           0           0           0           1
+           1           0           0           0           0
+
+[1980, 420]

@@ -1,0 +1,23 @@
+810.txt
+Solutions Checked:	10
+Fitness:	1.0
+Final States:	  5 1 0 4 6 7
+           6           6           1           1           7
+           8           7           7           3           0
+           3           2           3           8           3
+           5           8           3           0           4
+           2           1           6           4           6
+           5           4           0           0           3
+           2           8           8           7           6
+           3           4           3           2           0
+           7           2           2           5           3
+
+811.txt
+Solutions Checked:	10
+Fitness:	1.0
+Final States:	  2 1
+           2           1           1           1           2
+           2           0           0           1           0
+           2           2           1           0           0
+
+[10, 10]

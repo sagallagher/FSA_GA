@@ -1,0 +1,22 @@
+01.txt
+Solutions Checked:	10
+Fitness:	1.0
+Final States:	  0 4 7
+           3           0           6           3           2
+           3           0           0           0           6
+           3           2           1           5           5
+           3           6           3           3           4
+           2           0           5           4           6
+           6           6           3           3           7
+           1           1           4           6           1
+           7           0           6           2           7
+
+00.txt
+Solutions Checked:	10
+Fitness:	1.0
+Final States:	  1 2
+           1           1           0           2           1
+           0           0           2           2           1
+           1           1           2           1           1
+
+[10, 10]

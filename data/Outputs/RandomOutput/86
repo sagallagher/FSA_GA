@@ -1,0 +1,16 @@
+860.txt
+Solutions Checked:	600
+Fitness:	1.0
+Final States:	  1
+           0           1           0           1           0
+           1           1           0           0           1
+
+861.txt
+Solutions Checked:	1380
+Fitness:	1.0
+Final States:	  1
+           1           1           2           2           2
+           1           0           0           1           0
+           2           1           0           0           1
+
+[600, 1380]

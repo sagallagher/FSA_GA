@@ -1,0 +1,16 @@
+150.txt
+Solutions Checked:	70
+Fitness:	1.0
+Final States:	  0
+           1           0           0           0           1
+           0           1           1           0           1
+
+151.txt
+Solutions Checked:	1160
+Fitness:	1.0
+Final States:	  2
+           0           0           0           1           2
+           2           1           1           0           2
+           1           0           2           2           2
+
+[70, 1160]

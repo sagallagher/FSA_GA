@@ -1,0 +1,23 @@
+590.txt
+Solutions Checked:	550
+Fitness:	1.0
+Final States:	  8 7 2 4 6
+           0           4           7           2           3
+           0           4           0           4           4
+           0           7           3           2           4
+           1           4           0           6           3
+           6           7           1           0           8
+           4           4           6           6           4
+           6           4           8           6           8
+           0           3           6           1           8
+           0           3           3           1           3
+
+591.txt
+Solutions Checked:	40
+Fitness:	1.0
+Final States:	  0
+           2           0           2           1           1
+           1           1           1           1           0
+           2           0           2           1           1
+
+[550, 40]
