@@ -1,11 +1,11 @@
 from DataParser.DataParser import *
-from GeneticAlgorithm.GeneticOperator.InitializePopulation.RandomInitializePopulation import *
-from GeneticAlgorithm.GeneticOperator.Fitness.FSMHitRatioFitness import *
-from GeneticAlgorithm.GeneticOperator.Crossover.RandomCrossover import *
-from GeneticAlgorithm.GeneticOperator.Mutation.RandomTransitionMutation import *
-from GeneticAlgorithm.Genotype import *
-from GeneticAlgorithm.GeneticAlgorithm import *
-from Test.LearningDataGenerator.RandomLearningDataGenerator import *
+from lib.GeneticAlgorithm.GeneticOperator.InitializePopulation.RandomInitializePopulation import *
+from lib.GeneticAlgorithm.GeneticOperator.Fitness.FSMHitRatioFitness import *
+from lib.GeneticAlgorithm.GeneticOperator.Crossover.RandomCrossover import *
+from lib.GeneticAlgorithm.GeneticOperator.Mutation.RandomTransitionMutation import *
+from lib.GeneticAlgorithm.Genotype import *
+from lib.GeneticAlgorithm.GeneticAlgorithm import *
+from lib.Test.LearningDataGenerator.RandomLearningDataGenerator import *
 
 import os
 

@@ -1,8 +1,7 @@
-
-from Test.ConfigParser import *
-from Test.Tester import *
-from Test.MultiTester import *
-from Test.CompareResults.CompareResults import *
+from lib.Test.Tester import *
+from lib.Test.MultiTester import *
+from lib.Utility.ConfigParser import *
+from lib.Utility.CompareResults import *
 import sys
 
 def testOne(cp):

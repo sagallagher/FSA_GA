@@ -1,4 +1,4 @@
-from GeneticAlgorithm.Genotype.Chromosome import *
+from lib.GeneticAlgorithm.Genotype.Chromosome import *
 from random import randint
 
 class RandomCrossover():

@@ -2,7 +2,7 @@
 
 from random import randint
 
-from GeneticAlgorithm.Genotype.Chromosome import *
+from lib.GeneticAlgorithm.Genotype.Chromosome import *
 
 
 class RandomInitializePopulation():

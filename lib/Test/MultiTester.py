@@ -1,5 +1,5 @@
-from Test.Tester import *
-from Test.ConfigParser import *
+from lib.Test.Tester import *
+from lib.Utility.ConfigParser import *
 import sys
 import os, os.path
 class MultiTester():
