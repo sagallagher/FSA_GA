@@ -33,7 +33,7 @@ class FSMHitRatioFitness():
             else:
                 # go through the FSM
                 for element in example:
-                    try: row = fsm[row][int(element)-1]
+                    try: row = fsm[row][int(element)]
                     except:
                         # error occuring if
                         print "APLHABET SIZE:\t", self.alphabet_size

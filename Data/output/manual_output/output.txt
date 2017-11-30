@@ -1,0 +1,15 @@
+t2.txt
+Solutions Checked:	10
+Fitness:	1.0
+Final States:	  1
+           0           1
+           0           0
+
+training_set1.txt
+Solutions Checked:	20
+Fitness:	1.0
+Final States:	  1
+           0           1
+           0           1
+
+[10, 20]

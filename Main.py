@@ -1,18 +1,42 @@
 
 from Test.ConfigParser import *
 from Test.Tester import *
+from Test.MultiTester import *
+from Test.CompareResults.CompareResults import *
 import sys
+
+def testOne(cp):
+    t = Tester(cp)
+
+    t.run()
+
+def multiTest(cp):
+    m = MultiTester(cp)
+
+    m.generateMultOutput(cp.getSetting('OUTPUT_DIRECTORY'))
+
+    cr = CompareResults(cp.getSetting('OUTPUT_DIRECTORY'))
+
+    cr.plotAllOneGraph(int(cp.getSetting('MIN_ALPHABET_SIZE')),
+        int(cp.getSetting('MAX_ALPHABET_SIZE')),
+        int(cp.getSetting('MIN_EXAMPLES_PER_FILE')),
+        int(cp.getSetting('MAX_EXAMPLES_PER_FILE')),
+        int(cp.getSetting('FILES_TO_GENERATE')),)
 
 # read in a configuration file from parameters and send to tester
 if __name__ == '__main__':
     # create object to parse config file
     cp = ConfigParser()
     # parse the configuration file
-    try: cp.parse(sys.argv[1])
+    try:
+        cp.parse(sys.argv[1])
+        cfg = sys.argv[1]
     except:
         print "Need a config file"
         exit() # if one was not provided, exit
-    # send the configuration file to the tester so it can use the settings provided
-    t = Tester(cp)
-    # run the tests
-    t.run()
+
+    if int(cp.getSetting('TEST_OPTION')) == 1: testOne(cp)
+
+    elif int(cp.getSetting('TEST_OPTION')) == 2:  multiTest(cp)
+
+    else: print "A",cp.getSetting('TEST_OPTION')

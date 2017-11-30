@@ -75,7 +75,6 @@ class Tester():
         f =  open(self.OUTPUT_FILE, 'w')
 
         for filename in os.listdir(self.DIRECTORY):
-            print "Parsing:\t", filename
             # parse the training data set
             dp = DataParser(os.path.join(self.DIRECTORY, filename))
             dp.setAlphabetSize()
@@ -96,8 +95,6 @@ class Tester():
             f.write('Solutions Checked:\t'+str(generation)+'\n'+str(fsm)+'\n')
             # append the number of solutions checked in current file to array of solutions
             solutions_checked.append(generation)
-
-            print "Finished parsing:\t", filename
 
         # write the array of solutions checked to the bottom of the file
         # this will make it easier to load in the data and compare two algorithms
