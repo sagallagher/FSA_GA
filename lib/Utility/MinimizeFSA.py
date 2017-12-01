@@ -1,3 +1,4 @@
+from lib.GeneticAlgorithm.Genotype.Chromosome import *
 import collections
 
 class MinimizeFSA():
@@ -75,15 +76,6 @@ class MinimizeFSA():
 
     def minimize(self):
 
-        # get array of non final states
-        non_final_states = self.getNonFinalStates()
-
-        # store the final states
-        final_states = self.chromosome.final_states
-
-        # set of non final and final states
-        p = [[non_final_states],[final_states]]
-
         # get the equivelent states in the fsm
         eqs = self.getEq()
 
@@ -91,7 +83,7 @@ class MinimizeFSA():
         new_fsm = self.getNewFSM(eqs)
 
         # set the final states of the new fsm
-        self.getFinalStates(new_fsm,eqs)
+        new_final_states = self.getFinalStates(new_fsm,eqs)
 
         # return a chromosome with the minimized fsm and associated final states
-        return Chromosome(new_fsm,final_states)
+        return Chromosome(new_fsm,new_final_states)
