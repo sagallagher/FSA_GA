@@ -47,7 +47,7 @@ MAXIMUM_LENGTH = 25
 # MULTI_TESTER SETTINGS
 ################################################################################
 
-OUTPUT_DIRECTORY = C:/Users/Steven/Desktop/AutoAutamata/FSA_GA/data/Outputs/RandomOutput
+OUTPUT_DIRECTORY = /data/Outputs/RandomOutput
 # the size to begin testing
 MIN_ALPHABET_SIZE = 2
 # the size to end testing
